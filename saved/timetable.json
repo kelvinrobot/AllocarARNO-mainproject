@@ -1,33 +1,27 @@
 {
   "timetable": [
     {
-      "course_code": "CSC101",
+      "course_code": "MTH101",
       "lecturer": "Dr. A",
       "student_group": "Group1",
       "time": "8AM-10AM",
       "hall": "LT1"
     },
     {
-      "course_code": "MAT101",
+      "course_code": "PHY101",
       "lecturer": "Dr. A",
       "student_group": "Group1",
       "time": "10AM-12PM",
       "hall": "LT1"
     },
     {
-      "course_code": "PHY101",
-      "lecturer": "Dr. A",
+      "course_code": "CHM101",
+      "lecturer": "Dr. C",
       "student_group": "Group1",
       "time": "12PM-2PM",
       "hall": "LT1"
     }
   ],
-  "hash": "1c83d677568122e71bea512e96e87e80f527b2aff63e3e6cc40d1886431629b4",
-  "unscheduled_courses": [
-    {
-      "course_code": "BIO101",
-      "lecturer": "Dr. A",
-      "student_group": "Group1"
-    }
-  ]
+  "hash": "c5a60b20b324392d9c9fe6d7ee5869b341f37cd7d5f0579befa31ac65fb1d6c2",
+  "unscheduled_courses": []
 }
