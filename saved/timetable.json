@@ -1,27 +1,21 @@
 {
-  "timetable": [
+  "timetable": [],
+  "hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "unscheduled_courses": [
     {
       "course_code": "MTH101",
       "lecturer": "Dr. A",
-      "student_group": "Group1",
-      "time": "8AM-10AM",
-      "hall": "LT1"
+      "student_group": "Group1"
     },
     {
-      "course_code": "PHY101",
+      "course_code": "MTH101",
       "lecturer": "Dr. A",
-      "student_group": "Group1",
-      "time": "10AM-12PM",
-      "hall": "LT1"
+      "student_group": "Group1"
     },
     {
       "course_code": "CHM101",
-      "lecturer": "Dr. C",
-      "student_group": "Group1",
-      "time": "12PM-2PM",
-      "hall": "LT1"
+      "lecturer": "Dr. A",
+      "student_group": "Group1"
     }
-  ],
-  "hash": "c5a60b20b324392d9c9fe6d7ee5869b341f37cd7d5f0579befa31ac65fb1d6c2",
-  "unscheduled_courses": []
+  ]
 }
