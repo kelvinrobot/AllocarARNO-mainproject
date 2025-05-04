@@ -1,0 +1,32 @@
+.Container {
+  /* Ensure the container takes up the full width of its parent by default */
+  width: 100%;
+  padding: 0 5rem;
+}
+
+/* Larger screens (desktops) */
+@media (max-width: 990px) {
+  .Container {
+    padding: 0 2.5rem;
+  }
+}
+
+/* Media query for medium screens (e.g., tablets) */
+@media (max-width: 767px) {
+  .Container {
+    padding: 0 2rem;
+  }
+}
+
+/* Media query for small screens (e.g., phones) */
+@media (max-width: 576px) {
+  .Container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .Container {
+    padding: 0 .8rem;
+  }
+}

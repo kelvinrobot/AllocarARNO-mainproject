@@ -1,0 +1,35 @@
+/* Import Custome font */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VARIABLES */
+:root {
+  --font-primary: "Mulish", sans-serif;
+  --text-dark: #1c1c1e;
+  --primary: #322f92;
+  --primaryLight: #7d7ae5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: var(--font-primary);
+}
+.app-body {
+  background: linear-gradient(to right, #fafff2 20%, #dbdaff 80%);
+  padding: 20px 0 0;
+  height: 100%;
+}

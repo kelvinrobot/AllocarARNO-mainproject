@@ -1,0 +1,50 @@
+.feature-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 1px 1px #38363665;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.feature-image {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--primaryLight);
+}
+
+.feature-description {
+  font-size: 14px;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* Media query for medium screens (e.g., tablets) */
+@media (max-width: 425px) {
+  .feature-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .feature-description {
+    font-size: 13px;
+    color: var(--text-dark);
+    line-height: 1.5;
+  }
+}

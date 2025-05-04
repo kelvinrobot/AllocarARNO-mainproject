@@ -1,0 +1,145 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  border-radius: 24px;
+  background: linear-gradient(to right, #dbdaff61 20%, #fafff284 80%)
+      padding-box,
+    linear-gradient(to right, #fafff2 20%, #dbdaff 80%) border-box; /* Border gradient */
+  border: 2px solid transparent; /* Transparent border */
+  padding: 6px 20px;
+  box-shadow: inset 1px 1px 1px #dbdaff;
+}
+
+
+.notification-text {
+  font-size: 14px;
+  color: #3c3a65;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #3c3a65;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-title-highlight {
+  color: var(--primaryLight);
+}
+
+.hero-description {
+  font-size: 16px;
+  color: #3c3a65;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  max-width: 700px;
+}
+
+.hero-form {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.email-input {
+  padding: 5px 15px;
+  border-radius: 25px;
+  border: 1px solid #eaeaea;
+  font-size: 14px;
+  outline: none;
+  box-shadow: 0 0.5px 1px #76757542;
+  width: 300px;
+  color: #6b6a8e;
+}
+.email-input::placeholder {
+  color: #6b6a8e;
+}
+
+.join-beta-btn {
+  background-color: var(--primaryLight);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+/* Larger screens (desktops) */
+@media (max-width: 990px) {
+}
+/* Media query for medium screens (e.g., tablets) */
+@media (max-width: 767px) {
+  .notification-text {
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+}
+
+/* Media query for small screens (e.g., phones) */
+@media (max-width: 576px) {
+  .notification {
+    padding: 5px 20px;
+  }
+  .hero-form {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .email-input {
+    padding: 12px 25px;
+    border-radius: 25px;
+    width: 100%;
+  }
+  .join-beta-btn {
+    padding: 10px 20px;
+    width: 200px;
+    display: block;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0px 60px;
+  }
+  .notification-text {
+    font-size: 12px;
+  }
+  .hero-title {
+    font-size: 25px;
+  }
+  .hero-description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  .email-input {
+    padding: 12px 20px;
+    border-radius: 25px;
+    width: 100%;
+  }
+  .join-beta-btn {
+    padding: 10px 20px;
+    width: 150px;
+    font-size: 14px;
+  }
+}
+

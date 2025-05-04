@@ -1,0 +1,136 @@
+.timetable-form {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #68718229;
+    box-shadow: 0px 1px 1px #68718229;
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .table-header {
+    display: flex;
+    padding-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .header-cell {
+    flex: auto;
+    padding: 10px;
+    color: #000000;
+    font-size: 14px;
+  }
+  
+  .table-body {
+    margin-top: 10px;
+  }
+  
+  .table-row {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .table-cell {
+    flex: 1;
+    padding: 5px 10px;
+  }
+  
+  .table-cell input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #68718229;
+    box-shadow: 0px 1px 1px #68718229;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
+    color: #828282;
+  }
+  
+  .table-cell input:focus {
+    border-color: #322f92;
+  }
+  
+  /* Dropdown styles */
+  .select-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .dropdown-select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #68718229;
+    box-shadow: 0px 1px 1px #68718229;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+    color: #828282;
+  }
+  
+  .dropdown-select:focus {
+    border-color: #6c5ce7;
+  }
+  
+  .select-container .dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+  }
+  
+  .add-row-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #1C1C1E;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 0;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  
+  .add-icon {
+    margin-right: 5px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    gap: 10px;
+  }
+  
+  .save-draft-button {
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #68718229;
+    box-shadow: 0px 1px 1px #68718229;
+    border-radius: 4px;
+    color: #1C1C1E;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .generate-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #7D7AE5;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .generate-icon {
+    margin-right: 5px;
+  }
+  
