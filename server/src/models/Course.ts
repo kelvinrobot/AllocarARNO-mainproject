@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
 const CourseSchema = new mongoose.Schema({
   code: {
@@ -10,6 +10,7 @@ const CourseSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  schoolId: { type: String, ref: "School", required: true },
 });
 
 const Course = mongoose.model("Course", CourseSchema);

@@ -1,0 +1,131 @@
+.onboarding {
+  background: linear-gradient(to top right, #fafff2 20%, #dbdaff 80%);
+  height: 100%;
+}
+.user-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.onboarding .logo-container {
+  align-self: flex-start;
+  width: 170px;
+}
+.onboarding .logo {
+  position: relative;
+  top: -3rem;
+}
+.onboarding .logo img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.selection-card {
+  position: relative;
+  top: -5rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px 60px;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #68718229;
+  box-shadow: 0px 1px 1px #68718229;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #101828;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #1c1c1e;
+  margin-bottom: 60px;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.option {
+  flex: 1;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 0px 1px #d0d5dd;
+  border-radius: 8px;
+  padding: 25px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  color: #667085;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.option:hover {
+  border-color: #7d7ae5;
+}
+
+.option.selected {
+  border-color: #7d7ae5;
+  background-color: #7d7ae5;
+  color: #fff;
+}
+
+.option.selected .option-icon {
+  color: #fff;
+}
+
+.option-icon {
+  color: #7d7ae5;
+  font-size: 18px;
+}
+
+.continue-button {
+  width: 100%;
+  padding: 13px;
+  background-color: #7d7ae5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.continue-button:hover {
+  background-color: #6b67e0;
+}
+
+.continue-button:disabled {
+  background-color: #7d7ae5;
+  cursor: not-allowed;
+}
+
+.login-text {
+  font-size: 14px;
+  color: #667085;
+}
+
+.login-link {
+  color: #7d7ae5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}

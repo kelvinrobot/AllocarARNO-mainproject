@@ -1,0 +1,16 @@
+.student-sidebar .sidebar-menu li p {
+
+  color: #6B6A8E;
+
+}
+.student-sidebar .sidebar-menu li.active {
+  background-color: transparent;
+  font-weight: 600;
+}
+.student-sidebar .sidebar-menu li.active p {
+  color: #0B235E;
+}
+.student-sidebar .sidebar-menu li.active .menu-icon {
+  color: #0B235E;
+  background-color: transparent;
+}

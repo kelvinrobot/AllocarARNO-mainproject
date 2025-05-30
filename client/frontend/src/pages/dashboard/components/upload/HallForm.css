@@ -1,0 +1,57 @@
+.time-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.time-slots-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.info-toggle {
+  color: #888;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.time-slots-title {
+  font-weight: 600;
+  font-size: medium;
+}
+
+.time-slots-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #e4e3f3;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #666;
+  text-wrap: wrap;
+  padding: 8px 12px;
+}
+
+.info-toggle:hover {
+  text-decoration: underline;
+}
+
+.base-button {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.add-slot-button {
+  background-color: #7d7ae5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}

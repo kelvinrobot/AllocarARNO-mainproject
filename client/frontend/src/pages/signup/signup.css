@@ -1,0 +1,189 @@
+.signup-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.student .signup-form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.student .signup-form-content {
+  width: 100%;
+  max-width: 420px;
+}
+
+.student .signup-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.student .signup-subtitle {
+  font-size: 14px;
+  color: #667085;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  margin-bottom: 10px;
+}
+
+.student .name-fields {
+  display: flex;
+  gap: 15px;
+}
+
+.student .name-fields .input-field {
+  flex: 1;
+}
+
+.student .input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.student .input-field input,
+.student .input-field select {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 0px 2px #d0d5dd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  color: #667085;
+}
+
+.student .input-field input:focus {
+  border-color: #7d7ae5;
+}
+
+.student .input-field input::placeholder {
+  color: #667085;
+}
+
+.student .input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #667085;
+}
+
+.student .input-field input[name="matricNumber"],
+.student .input-field input[name="password"] {
+  padding-left: 40px;
+}
+
+.student .password-field {
+  position: relative;
+}
+
+.student .password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #667085;
+}
+
+.student .terms-text {
+  text-align: left !important;
+  font-size: 14px;
+  color: #667085;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  /* line-height: 0.5; */
+}
+
+.student .policy-link {
+  color: #101828;
+  text-decoration: none;
+  font-weight: bold;
+  font-weight: 400;
+}
+
+.student .policy-link:hover {
+  text-decoration: underline;
+}
+
+.student .signup-button {
+  width: 100%;
+  padding: 13px;
+  background-color: #7d7ae5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.student .signup-button:hover {
+  background-color: #6b67e0;
+}
+.signup-page-footer {
+  color: #667085;
+  font-size: 12px;
+  margin-top: 4.5rem;
+}
+/* Dashboard Preview Section */
+.student .dashboard-preview-section {
+  flex: 1;
+  background-color: #e8e6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.student .dashboard-preview {
+  background-color: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .student .signup-container {
+    flex-direction: column;
+  }
+
+  .student .signup-form-section {
+    padding: 20px;
+  }
+
+  .student .dashboard-preview-section {
+    padding: 20px;
+  }
+
+  .student .dashboard-preview {
+    max-width: 100%;
+  }
+
+  .student .metrics-chart {
+    flex-direction: column;
+  }
+
+  .student .chart-bars {
+    justify-content: center;
+  }
+
+  .student .name-fields {
+    flex-direction: column;
+    gap: 0;
+  }
+}

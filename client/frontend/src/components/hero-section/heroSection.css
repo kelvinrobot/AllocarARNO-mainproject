@@ -1,0 +1,105 @@
+z.hero-section-wrapper {
+  position: relative;
+  width: 98%;
+  height: 100%;
+  margin: 1rem auto 0;
+}
+
+.hero-section {
+  background: linear-gradient(to top, #dbdaff 55%, #fafff2 75%, #dbdaff 100%);
+  /* background: #dbdaff; */
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  padding: 3rem 5rem 1rem;
+}
+
+/* navbar */
+.hero-section-wrapper .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-section-wrapper .navbar-logo {
+  width: 140px;
+}
+
+.hero-section-wrapper .navbar-logo img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-section-wrapper .navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-section-wrapper .nav-link {
+  color: #1c1c1e;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.hero-section-wrapper .nav-link.active {
+  color: #322f92;
+}
+.hero-section-wrapper .nav-link:hover {
+  color: #322f92;
+}
+
+.hero-section-wrapper .navbar-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-section-wrapper .signup-btn {
+  background-color: #7d7ae5;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.hero-section-wrapper .signup-btn:hover {
+  background-color: #726eda;
+}
+
+.hero-section-wrapper .hero .hero-text-wrapper {
+  /* max-width: 50%; */
+}
+.hero-section-wrapper .hero-heading {
+  margin-bottom: 2rem;
+}
+.hero-section-wrapper .hero-heading h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 4rem;
+  color: #1c1c1e;
+}
+.hero-section-wrapper .hero-heading h1 span {
+  color: #7d7ae5;
+}
+.hero-section-wrapper .hero-heading-cusor {
+  width: 70px;
+  bottom: 0.2rem;
+  left: 10rem;
+}
+.hero-section-wrapper .hero-heading-cusor img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-section-wrapper .hero-paragraph {
+  max-width: 60%;
+  margin: 0 auto;
+  color: #1c1c1e;
+}

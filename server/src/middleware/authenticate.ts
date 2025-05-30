@@ -1,11 +1,10 @@
-import { NextFunction, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import { _res } from "../lib/utils";
 import jwt from "jsonwebtoken";
 import { IRequestWithUser } from "../lib/interface";
-import User from "../models/User";
 
 export const authenticate = async (
-  req: IRequestWithUser,
+  req: Request,
   res: Response,
   next: NextFunction
 ) => {
@@ -23,21 +22,15 @@ export const authenticate = async (
       return;
     }
 
-    try {
-      const decoded = jwt.verify(token, secret);
-      const user = await User.findById((decoded as any).id);
+    const decoded = jwt.verify(token, secret);
 
-      if (!user) {
-        _res.error(401, res, "Unauthenticated - User not found.");
-        return;
-      }
-
-      req.user = user;
-      return next();
-    } catch (error) {
-      _res.error(401, res, "Unauthenticated - Invalid token.");
+    if (!decoded) {
+      _res.error(401, res, "Unauthenticated - User not found.");
       return;
     }
+
+    (req as IRequestWithUser).user = decoded as any;
+    return next();
   } catch (error) {
     next(error);
   }

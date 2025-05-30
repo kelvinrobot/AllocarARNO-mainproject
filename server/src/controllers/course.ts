@@ -1,8 +1,7 @@
 import { NextFunction, Response, Request } from "express";
 import Course from "../models/Course";
 import { _res } from "../lib/utils";
-import StudentGroup from "../models/StudentGroup";
-import Lecturer from "../models/Lecturer";
+import { IRequestWithUser } from "../lib/interface";
 
 export const getCourses = async (
   req: Request,
@@ -10,9 +9,16 @@ export const getCourses = async (
   next: NextFunction
 ) => {
   try {
-    const courses = await Course.find({});
+    const courses = await Course.find({
+      schoolId: (req as IRequestWithUser).user.schoolId,
+    });
+    const formattedCourses = courses.map(({ _id, name, code }) => ({
+      id: _id,
+      name,
+      code,
+    }));
 
-    _res.success(200, res, "Courses fethced successfully", courses);
+    _res.success(200, res, "Courses fetched successfully", formattedCourses);
   } catch (error) {
     next(error);
   }
@@ -24,14 +30,17 @@ export const addCourse = async (
   next: NextFunction
 ) => {
   try {
-    const { course_code, name } = req.body;
+    const { code, name } = req.body;
 
-    if (!course_code || !name) {
+    if (!code || !name) {
       _res.error(400, res, "Course code and name are required");
       return;
     }
 
-    const existingCourseWithCode = await Course.findOne({ code: course_code });
+    const existingCourseWithCode = await Course.findOne({
+      code,
+      schoolId: (req as IRequestWithUser).user.schoolId,
+    });
     if (existingCourseWithCode) {
       _res.error(400, res, "A course wth this code already exists");
       return;
@@ -39,7 +48,8 @@ export const addCourse = async (
 
     const newCourse = await Course.create({
       name,
-      code: course_code,
+      code,
+      schoolId: (req as IRequestWithUser).user.schoolId,
     });
 
     _res.success(201, res, "Course created successfully", newCourse);

@@ -1,0 +1,176 @@
+/* Update the modal-overlay class */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.modal-overlay.closing {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+/* Update the modal-container class */
+.modal-container {
+  background-color: white;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  text-align: center;
+  animation: scaleIn 0.3s ease forwards;
+  overflow: hidden;
+}
+
+.modal-container.closing {
+  animation: scaleOut 0.3s ease forwards;
+}
+.modal-container-header {
+  background: #eeeef6;
+  padding: 24px 44px;
+}
+
+.close-button {
+  cursor: pointer;
+  color: #6b6a8e;
+}
+
+.modal-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1c1c1e;
+}
+
+.success-title {
+  margin-bottom: 1rem;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: #1C1C1E;
+}
+
+.modal-text {
+  color: #1c1c1e;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.modal-buttons {
+  margin: 3rem  0 1rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.modal-buttons.centered {
+  justify-content: center;
+}
+
+.cancel-btn {
+  background-color: white;
+  color: #1C1C1E;
+  border: 1px solid #1C1C1E;
+  border-radius: 6px;
+  padding: 13px 35px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancel-button:hover {
+  background-color: #f5f5f5;
+}
+
+.submit-btn {
+  background-color: #7b68ee;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 13px 35px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #6a5acd;
+}
+
+.go-back-btn {
+  background-color: #7b68ee;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 13px 35px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.go-back-btn:hover {
+  background-color: #6a5acd;
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #7b68ee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 26px;
+}
+
+.success-icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}

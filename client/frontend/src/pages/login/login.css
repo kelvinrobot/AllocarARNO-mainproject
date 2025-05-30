@@ -1,0 +1,161 @@
+.student-login-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.student .login-form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.student .login-form-content {
+  width: 100%;
+  max-width: 420px;
+}
+
+.student .login-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.student .login-subtitle {
+  font-size: 14px;
+  color: #667085;
+  margin-bottom: 40px;
+}
+
+.student .form-label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+}
+.student .separator {
+  border-top: 1px solid #d9d9d9;
+  margin: 15px 0;
+  width: 26.5%;
+}
+
+.student .input-text {
+  color: #667085;
+  font-size: 12px;
+  margin: 0;
+}
+
+.student .input-container {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.student .input-container input {
+  width: 100%;
+  padding: 15px 40px 15px 15px;
+  padding-left: 40px;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 0px 2px #d0d5dd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  color: #667085;
+}
+
+.student .input-container input:focus {
+  border-color: #7d7ae5;
+}
+
+.student .input-container input::placeholder {
+  color: #667085;
+}
+
+.student .input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #667085;
+}
+
+.student .password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #667085;
+}
+
+.student .forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.student .forgot-password a {
+  color: #322f92;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.student .forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.student .sign-in-button {
+  width: 100%;
+  padding: 13px;
+  background-color: #7d7ae5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.student .sign-in-button:hover {
+  background-color: #6b67e0;
+}
+
+.login-page-footer {
+  color: #667085;
+  font-size: 12px;
+  margin-top: 6rem;
+}
+
+/* Dashboard Preview Section */
+.student .dashboard-preview-section {
+  flex: 1;
+  background: linear-gradient(to bottom left, #fafff2 10%, #dbdaff 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.student .dashboard-preview {
+  background-color: white;
+  border-radius: 16px 0 0 16px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 2px 10px #0000001A;
+  overflow: hidden;
+  position: relative;
+  left: 3rem;
+}
+
+.student .dashboard-preview-image {
+  width: 750px;
+}
+.student .dashboard-preview-image img {
+  width: 100%;
+  object-fit: cover;
+}

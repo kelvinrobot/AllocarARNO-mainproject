@@ -26,15 +26,14 @@ export interface IUser extends Document {
   gender: "male" | "female";
   role?: "admin" | "group-rep" | "member";
   emailVerified?: boolean;
+  schoolId: string;
   lastSignInAt?: Date;
   createdAt: Date;
   updatedAt: Date;
 
   // Methods
   comparePassword(candidatePassword: string): Promise<boolean>;
-  getPublicProfile(
-    requestingUserId?: string
-  ): Promise<Partial<IUser> & { name?: string }>;
+  getPublicProfile(): Promise<Partial<IUser> & { name?: string }>;
   generateAuthToken(): string;
   resetPassword(newPassword: string): Promise<void>;
 }
@@ -70,6 +69,10 @@ const userSchema = new Schema<IUser>(
       type: String,
       default: null,
     },
+    schoolId: {
+      type: String,
+      default: null,
+    },
     gender: {
       type: String,
       enum: ["male", "female"],
@@ -77,7 +80,7 @@ const userSchema = new Schema<IUser>(
     },
     role: {
       type: String,
-      enum: ["admin", "group-rep", "member"],
+      enum: ["admin", "group-rep", "member", "lecturer"],
       default: "member",
     },
   },
@@ -178,9 +181,20 @@ userSchema.methods.generateAuthToken = function (): string {
     throw new Error("JWT_SECRET environment variable is not set");
   }
 
-  return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
-    expiresIn: JWT_EXPIRATION,
-  });
+  return jwt.sign(
+    {
+      id: this._id,
+      firstName: this.firstName,
+      lastName: this.lastName,
+      email: this.email,
+      role: this.role,
+      schoolId: this.schoolId,
+    },
+    process.env.JWT_SECRET,
+    {
+      expiresIn: JWT_EXPIRATION,
+    }
+  );
 };
 
 /**
@@ -211,6 +225,28 @@ userSchema.methods.resetPassword = async function (
 ): Promise<void> {
   this.password = newPassword;
   await this.save();
+};
+
+/**
+ * Get public profile for the user
+ */
+userSchema.methods.getPublicProfile = async function (): Promise<
+  Partial<IUser> & { name?: string }
+> {
+  return {
+    id: this._id,
+    email: this.email,
+    firstName: this.firstName,
+    lastName: this.lastName,
+    name: `${this.firstName} ${this.lastName}`,
+    imageUrl: this.imageUrl,
+    gender: this.gender,
+    role: this.role,
+    emailVerified: this.emailVerified,
+    lastSignInAt: this.lastSignInAt,
+    createdAt: this.createdAt,
+    updatedAt: this.updatedAt,
+  };
 };
 
 const User = mongoose.model<IUser>("User", userSchema);

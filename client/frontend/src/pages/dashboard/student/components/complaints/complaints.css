@@ -1,0 +1,37 @@
+.complaints-wrapper {
+    width: 100%;
+    margin-top: 2.5rem;
+}
+.complaints-card{
+    border: 1px solid #ECECF3;
+    border-radius: 33px;
+    padding: 40px 20px;
+}
+
+.complaint-title {
+ color: #1C1C1E;
+ font-weight: 700;
+ font-size: 20px;
+ margin-bottom: 1rem;
+}
+
+.complaints-text {
+    color: #1C1C1E;
+    max-width: 80%;
+    font-size: 14px;
+}
+.report-issue {
+    margin-top: 1rem;
+}
+.report-issue button {
+    padding: 12px 25px;
+    background-color: #7D7AE5;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    transition: all .3s ease;
+}
+.report-issue button:hover {
+    background-color: #6c68da;
+}
+

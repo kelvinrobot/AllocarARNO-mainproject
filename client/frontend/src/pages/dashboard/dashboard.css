@@ -34,7 +34,7 @@ header.dashboard-header {
   background-color: #f4f7fc;
   border-bottom: 1px solid #ececf3;
   width: 100%;
-  z-index: 1;
+  /* z-index: ; */
 }
 
 .greeting h1 {
@@ -64,7 +64,7 @@ header.dashboard-header {
 
 /* Sidebar Styles */
 .sidebar {
-  margin-top: 5.5rem;
+  margin-top: 6rem;
   width: 250px;
   background-color: #fff;
   border-right: 1px solid #e0e0e0;
@@ -254,6 +254,7 @@ header.dashboard-header {
   font-weight: 500;
   font-size: 12px;
   color: #bdbdbd;
+  text-transform: capitalize;
   padding: 0 10px 0 3px;
 }
 .dropdown-icon {

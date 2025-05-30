@@ -1,0 +1,130 @@
+.feature-section {
+   background: linear-gradient(
+    to right,
+    #F6F7F9 20%,
+    #F2F2FF 80%
+    );
+  padding: 40px;
+  border-radius: 32px;
+
+}
+
+.feature-section .feature-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.feature-section .feature-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.feature-section .feature-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.feature-section .highlight {
+  color: #7D7AE5;
+}
+
+.feature-section .feature-description {
+  color: #3C3A65;
+  font-size: .9rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-width: 85%;
+}
+
+
+.feature-section .feature-cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  min-width: 300px;
+}
+
+.feature-section .feature-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 2px #76757559;
+}
+
+.feature-section .icon-container {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #fff;
+}
+
+
+.feature-section .blue {
+  background-color: #322F92;
+}
+
+.feature-section .feature-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.feature-section .feature-card p {
+  color: #3C3A65;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.feature-section .discover-button {
+  background-color: #7D7AE5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+}
+
+.feature-section .discover-button:hover {
+  background-color: #726eda;
+}
+
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .feature-section .feature-container {
+    flex-direction: column;
+  }
+
+  .feature-section .feature-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-section .feature-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-section .feature-heading {
+    font-size: 2rem;
+  }
+}

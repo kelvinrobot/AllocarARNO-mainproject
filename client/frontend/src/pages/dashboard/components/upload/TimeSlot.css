@@ -1,0 +1,24 @@
+.time-slot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.time-slot-input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.time-slot label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #888;
+}
+
+.time-slot select {
+  flex: 1;
+  background: none;
+}

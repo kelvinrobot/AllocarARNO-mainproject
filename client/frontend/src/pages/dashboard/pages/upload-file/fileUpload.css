@@ -1,100 +1,174 @@
 .file-upload-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .upload-title {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000000;
-    margin-bottom: 6px;
-  }
-  
-  .upload-description {
-    font-size: 14px;
-    color: #6B6A8E;
-    margin-bottom: 24px;
-  }
-  
-  .format {
-    font-weight: 500;
-    color: #7D7AE5;
-  }
-  
-  .upload-area {
-    border: 2px dashed #7D7AE5;
-    border-radius: 18px;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background-color: #f9f9ff;
-    margin-bottom: 24px;
-    min-height: 240px;
-  }
-  
-  .upload-area.dragging {
-    border-color: #6c5ce7;
-    background-color: #f0f0ff;
-  }
-  
-  
-  .upload-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .upload-icon {
-    color: #322F92;
-    margin-bottom: 16px;
-  }
-  
-  .upload-text {
-    font-size: 14px;
-    color: #000000;
-    margin-bottom: 8px;
-    font-weight: 600;
-  }
-  
-  .file-size-info {
-    font-size: 14px;
-    color: #6B6A8E;
-    display: flex;
-    align-items: center;
-  }
-  
-  .info-icon {
-    margin-right: 4px;
-    font-size: 20px;
-    font-weight: bolder;
-    color: #6B6A8E;
-  }
-  
-  .upload-button {
-    background-color: #7D7AE5;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 12px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .upload-button:hover {
-    background-color: #7874da;
-  }
-  
-  .upload-button:disabled {
-    background-color: #7D7AE5;
-    cursor: not-allowed;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.entity-selector {
+  background: #7d7ae5;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.upload-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.upload-description {
+  font-size: 14px;
+  color: #6b6a8e;
+  margin-block: 16px;
+}
+
+.format {
+  font-weight: 500;
+  color: #7d7ae5;
+}
+
+.upload-area {
+  border: 2px dashed #7d7ae5;
+  border-radius: 18px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #f9f9ff;
+  margin-bottom: 24px;
+  min-height: 240px;
+}
+
+.upload-area.dragging {
+  border-color: #6c5ce7;
+  background-color: #f0f0ff;
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.upload-icon {
+  color: #322f92;
+  margin-bottom: 16px;
+}
+
+.upload-text {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.file-size-info {
+  font-size: 14px;
+  color: #6b6a8e;
+  display: flex;
+  align-items: center;
+}
+
+.info-icon {
+  margin-right: 4px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #6b6a8e;
+}
+
+.upload-button {
+  flex: 1;
+  background-color: #7d7ae5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.upload-button:hover {
+  background-color: #7874da;
+}
+
+.upload-button:disabled {
+  background-color: #7d7ae5;
+  cursor: not-allowed;
+}
+
+.form-title {
+  margin-top: 25px;
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.entity-container {
+  min-width: calc(100% - 840px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 12px;
+  border: 2px dashed #7d7ae5;
+  padding: 16px 20px;
+}
+
+.entity-header {
+  font-size: larger;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.file-upload-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+}
+
+.entity-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.entity-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.entity-table thead {
+  background-color: #7d7ae5;
+  color: #f0f0ff;
+}
+
+.entity-table th,
+.entity-table td {
+  /* border: 1px solid #f4f4f4; */
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.entity-table th {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.entity-table tr:nth-child(even) {
+  background-color: #f5f1f7;
+}
+
+.no-entries {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  height: 100%;
+  align-content: center;
+}

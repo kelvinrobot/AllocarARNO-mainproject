@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import { _res } from "../lib/utils";
 import Lecturer from "../models/Lecturer";
+import User from "../models/User";
+import { IRequestWithUser } from "../lib/interface";
 
 export const getLecturers = async (
   req: Request,
@@ -8,7 +10,9 @@ export const getLecturers = async (
   next: NextFunction
 ) => {
   try {
-    const lecturers = await Lecturer.find({});
+    const lecturers = await Lecturer.find({
+      schoolId: (req as IRequestWithUser).user.schoolId,
+    });
 
     _res.success(200, res, "Lecturers fetched successfully", lecturers);
   } catch (error) {
@@ -22,25 +26,47 @@ export const addLecturer = async (
   next: NextFunction
 ) => {
   try {
-    const { name, gender, rank } = req.body;
+    const { name, gender, rank, email } = req.body;
+    const n = name as string;
+    const names = n.split(" ");
+    const firstName = names[0];
+    const lastName = names[1];
+    const schoolId = (req as IRequestWithUser).user.schoolId;
 
-    if (!name || !gender) {
+    if (!firstName || !lastName || !gender) {
       _res.error(
         400,
         res,
-        "Invalid data input - lecturer name and gender fields are required"
+        "Invalid data input - lecturer fullname and gender fields are required"
       );
       return;
     }
 
-    const existingLecturer = await Lecturer.findOne({ name });
+    const existingLecturer = await Lecturer.findOne({ email });
 
     if (existingLecturer) {
-      _res.error(400, res, "A lecturer with this name already exists");
+      _res.error(400, res, "A lecturer with this email already exists");
       return;
     }
 
-    const newLecturer = await Lecturer.create({ name, gender, rank });
+    const password = new Date().getTime();
+    const newLecturer = await Lecturer.create({
+      name,
+      gender,
+      rank,
+      email,
+      password,
+      schoolId,
+    });
+    await User.create({
+      firstName,
+      lastName,
+      gender,
+      role: "lecturer",
+      password,
+      email,
+      schoolId,
+    });
 
     if (!newLecturer) {
       _res.error(400, res, "Error creating lecturer");
