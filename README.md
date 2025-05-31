@@ -63,12 +63,6 @@ Once a schedule is finalized, it is hashed and minted on-chain via a smart contr
 | Frontend UI       |   Basic components built |
 | Documentation     |  You're reading it |
 
-## Team
-
-- Project Manager & Founder: [Your Name]
-- AI Engineer: [Name]
-- Backend Developer: [Name]
-- Product Designer: [Name]
 
 ## 💭 What’s Next?
 
