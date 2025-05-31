@@ -1,61 +1,79 @@
-# AllocARNO AI
+# Allocarno
 
-## Project Description
-AllocARNO AI is an AI-powered academic scheduling system developed as a hackathon project. It automates the creation of conflict-free university timetables by leveraging intelligent scheduling algorithms.
+Allocarno is an AI-powered scheduling system designed to bring order and transparency to Nigeria’s chaotic university timetables — built on Cardano using Aiken and Lucid.
 
-Scheduling academic courses is often complex due to overlapping lecturer availabilities and student group constraints. AllocARNO AI addresses this challenge by generating optimized timetables with built-in conflict detection. The final timetable is hashed and stored (e.g., on a blockchain) to ensure immutability and transparency.
+##  Problem
 
-## Features
-Intelligent Scheduling: Automatically generates academic timetables with no lecturer or student group conflicts.  
-Conflict Detection: Checks for scheduling clashes for both lecturers and student groups, ensuring a realistic schedule.  
-Unschedulable Courses Reported: Identifies any courses or classes that could not be scheduled, listing them separately.  
-Blockchain Verification: Creates a cryptographic hash of the timetable and saves it on a blockchain (e.g., Cardano) for secure, tamper-proof verification.  
-JSON Output: Saves the final timetable (and unscheduled courses) into a JSON file for easy export and review.  
-FastAPI Backend: Built on FastAPI for a robust, high-performance RESTful API interface.  
+University students often face:
+- Clashing lecture schedules
+- Sudden unannounced timetable edits
+- Overloaded weeks and wasted days
+- Zero visibility or trust in what’s final
 
-## Technologies Used
-Python 3.x – Programming language for AI logic and backend development.  
-FastAPI – Web framework for creating the REST API.  
-Uvicorn – ASGI server for running the FastAPI application.  
-Pydantic– Data validation and settings management.  
-Hashlib (SHA-256) – For generating secure hashes of the timetable.  
-JSON – Data format for storing the output.  
-(Optional) Cardano Blockchain – Can be integrated for on-chain verification of the schedule hash.  
+These problems delay graduations, cause resits, and create needless stress in already broken systems.
 
-## Installation Instructions
-1. Clone the Repository:  
-   ```bash
-   git clone https://github.com/kelvinrobot/AllocARNO-AI.git
-   cd AllocARNO-AI
-   ```
-2. Create a Virtual Environment (optional but recommended):  
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows use `venv\\Scripts\\activate`
-   ```
-3. Install Dependencies:  
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. **Run the Server:  
-   ```bash
-   uvicorn main:app --reload
-   ```
-   The FastAPI server should now be running on `http://127.0.0.1:8000/`.
+##  Solution
 
-## API Usage
-After starting the server, you can generate the timetable and view results via the API:  
-- Visit the interactive API documentation at `http://127.0.0.1:8000/docs` to explore available endpoints.  
-- Example: To generate a timetable (assuming a GET endpoint `/schedule` exists):  
-  ```bash
-  curl -X GET "http://127.0.0.1:8000/schedule"
-  ```
-  The API will return a JSON response containing the conflict-free timetable. The full schedule is also saved to a `timetable.json` file in the project directory.  
-- Any courses that could not be scheduled will be listed under `unscheduled_courses` in the JSON output.  
+Allocarno combines AI-powered timetable generation with Cardano smart contracts to deliver:
+- Balanced, clash-free schedules
+- Immutable, verifiable proof of what was officially released
+- Public visibility with private flexibility
+- Transparent change logs — no more hidden edits
 
-## Project Status
-Phase 1 complete — AI Engine .
-phase 2 advancing to deep machine learning engine after MVP stage
+Once a schedule is finalized, it is hashed and minted on-chain via a smart contract. Institutions and students can always verify the original — even if someone tries to change it later.
 
-## Credits
-Developed by Kelvin (GitHub: [kelvinrobot](https://github.com/kelvinrobot)).
+##  Features
+
+-  AI model for intelligent schedule creation
+-  Aiken smart contract to mint & store timetable hashes
+-  Lucid off-chain logic to interact with Cardano from TypeScript
+-  User roles for admin, student (read-only)
+-  Simple frontend UI (WIP)
+
+##  Tech Stack
+
+| Component     | Technology        |
+|---------------|-------------------|
+| AI Scheduling | Python (Reinforcement Learning) |
+| Smart Contracts | Aiken (Cardano) |
+| Off-Chain Logic | Lucid (TypeScript) |
+| Backend       | FastAPI / Node.js |
+| Database      | PostgreSQL |
+| Frontend      | React.js          |
+| Wallet        | Nami or Eternl (Testnet) |
+
+##  How It Works
+
+1. Admin submits course data to backend
+2. AI model generates a clash-free schedule
+3. Schedule is hashed
+4. Lucid script sends hash to Aiken smart contract
+5. Hash is stored on Cardano testnet for verification
+
+> 🛠 If a schedule changes, the new version is also hashed and recorded. No old version is ever overwritten.
+
+##  Project Progress
+
+| Component         | Status     |
+|------------------|------------|
+| AI Scheduling     |   Ready (hash output) |
+| Backend API       | In Progress |
+| Lucid Integration | In Progress |
+| Aiken Contract    |  Written, testing ongoing |
+| Frontend UI       |   Basic components built |
+| Documentation     |  You're reading it |
+
+## Team
+
+- Project Manager & Founder: [Your Name]
+- AI Engineer: [Name]
+- Backend Developer: [Name]
+- Product Designer: [Name]
+
+## 💭 What’s Next?
+
+- Finalize off-chain logic (Lucid)
+- Link smart contract to backend
+- Finish frontend demo UI
+- Record full demo
+- Prepare post-hackathon launch
